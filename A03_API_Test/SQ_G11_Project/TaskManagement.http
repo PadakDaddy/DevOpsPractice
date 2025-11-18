@@ -1,0 +1,54 @@
+@TaskManagement_HostAddress = http://localhost:5173
+
+GET {{TaskManagement_HostAddress}}/api/tasks
+Accept: application/json
+
+### Display All tasks
+
+GET {{TaskManagement_HostAddress}}/api/tasks/{id}
+
+### Search a task by ID
+
+GET {{TaskManagement_HostAddress}}/api/tasks/{assignee}
+
+### Search a task by Assignee
+
+POST {{TaskManagement_HostAddress}}/api/tasks
+Accept: application/json
+
+### Add a task
+
+PATCH {{TaskManagement_HostAddress}}/api/tasks/{id}
+Accept: application/json
+
+### Update a task
+
+DELETE {{TaskManagement_HostAddress}}/api/tasks/{id}
+Accept: application/json
+
+### Delete a task
+
+PUT {{TaskManagement_HostAddress}}/api/tasks/{id}/assignee
+Accept: application/json
+
+### Add assignee to a task
+
+DELETE {{TaskManagement_HostAddress}}/api/tasks/{id}/assignee
+Accept: application/json
+
+### Remove an assignee from a task
+
+PUT {{TaskManagement_HostAddress}}/api/tasks/{id}/priority
+Accept: application/json
+
+### Assign priority to a task
+
+PATCH {{TaskManagement_HostAddress}}/api/tasks/{id}/priority
+Accept: application/json
+
+### Change priority of a task
+
+DELETE {{TaskManagement_HostAddress}}/api/tasks/{id}/priority
+Accept: application/json
+
+### Remove priority from a task

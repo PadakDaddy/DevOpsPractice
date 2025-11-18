@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Group Project 2</title>
+
+    <script src="./js/validator.js"></script>
+    <script src="./js/functions.js"></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body style="margin: 50px">
+    <table style="width: 100%">
+      <tr style="width: 100%">
+        <td colspan="2" style="width: 50%; height: 70px; text-align: center">
+          <h2>Task Manager</h2>
+        </td>
+      </tr>
+      <tr style="width: 100%">
+        <td
+          style="width: 50%; height: 30px; padding: 0; vertical-align: middle"
+        >
+          <input
+            name="addButton"
+            id="addButtonId"
+            type="button"
+            value="ADD"
+            onclick="addTask()"
+          />
+          <input
+            name="updateButton"
+            id="updateButtonId"
+            type="button"
+            value="UPDATE"
+            onclick="updateTask()"
+            disabled
+          />
+          <input
+            name="deleteButton"
+            id="deleteButtonId"
+            type="button"
+            value="DELETE"
+            onclick="deleteTask()"
+            disabled
+          />
+        </td>
+        <td style="width: 50%; height: 30px; padding: 0px; text-align: right">
+          <select
+            style="width: 80px; height: 25px; text-align: center"
+            name="filterType"
+            id="filterTypeId"
+          >
+            <option value="0">All</option>
+            <option value="1">ID</option>
+            <option value="2">Assignee</option>
+          </select>
+          <input
+            style="width: 100px; padding: 0; text-align: center"
+            name="filterData"
+            id="filterDataId"
+            type="text"
+            maxlength="20"
+            size="20"
+            disabled
+          />
+          <input
+            style="text-align: center"
+            name="searchButton"
+            id="searchButtonId"
+            type="button"
+            value="SEARCH"
+            onclick="searItemByCondition()"
+          />
+        </td>
+      </tr>
+      <tr style="width: 100%">
+        <td style="width: 50%; height: 35px">
+          <div id="assigneeActions" style="margin-top: 8px">
+            <button
+              id="addAssigneeButtonId"
+              style="height: 25px; display: none"
+              onclick="openAddAssigneeForSelected()"
+            >
+              Add Assignee
+            </button>
+            <button
+              id="removeAssigneeButtonId"
+              style="height: 25px; display: none"
+              onclick="removeAssigneeForSelected()"
+            >
+              Remove Assignee
+            </button>
+          </div>
+        </td>
+        <td style="width: 50%; height: 30px"></td>
+      </tr>
+      <tr style="width: 100%; height: 30px">
+        <td colspan="2" style="width: 50%; height: 30px">
+          <form id="addTaskForm" style="visibility: hidden">
+            <label>ID: </label>
+            <input
+              style="width: 25px; height: 20px; padding: 0; text-align: center"
+              name="taskId"
+              id="taskId"
+              type="text"
+              maxlength="5"
+              size="5"
+            />
+            <label>Title: </label>
+            <input
+              style="width: 165px; height: 20px; padding: 0; text-align: center"
+              name="taskTitle"
+              id="taskTitleId"
+              type="text"
+              maxlength="20"
+              size="20"
+            />
+            <label id="assigneeLabel">Assignee: </label>
+            <input
+              style="width: 165px; height: 20px; padding: 0; text-align: center"
+              name="taskAssignee"
+              id="taskAssigneeId"
+              type="text"
+              maxlength="20"
+              size="20"
+            />
+            <label id="priorityLabel">priority: </label>
+            <select
+              style="width: 150px; height: 20px; padding: 0; text-align: center"
+              name="taskPriority"
+              id="taskPriorityId"
+              type="text"
+            >
+              <option value="0">Non Selected</option>
+              <option value="1">1 Top Priority</option>
+              <option value="2">2 High Priority</option>
+              <option value="3">3 Medium Priority</option>
+              <option value="4">4 Low Priority</option>
+            </select>
+            <input
+              style="
+                width: 70px;
+                height: 25px;
+                text-align: center;
+                margin-left: 20px;
+              "
+              name="saveButton"
+              id="saveButtonId"
+              type="button"
+              value="SAVE"
+              onclick="saveTask()"
+            />
+            <input
+              style="width: 70px; height: 25px; text-align: center"
+              name="cancelButton"
+              id="cancelButtonId"
+              type="button"
+              value="CANCEL"
+              onclick="cancelTask()"
+            />
+          </form>
+          <!--Modify Priority form-->
+          <form id="modifyPriority" style="visibility: collapse">
+            <label id="modPriorityLabel">Priority(1-4): </label>
+            <select
+              style="width: 150px; height: 20px; text-align: center"
+              name="modTaskPriority"
+              id="modTaskPriorityId"
+              type="text"
+            >
+              <option value="0">Non Selected</option>
+              <option value="1">1 Top Priority</option>
+              <option value="2">2 High Priority</option>
+              <option value="3">3 Medium Priority</option>
+              <option value="4">4 Low Priority</option>
+            </select>
+            <input
+              style="width: 110px; height: 25px; text-align: center; padding: 0"
+              name="updatePriorityButton"
+              id="updatePriorityButtonId"
+              type="button"
+              value="Update Priority"
+              onclick="updatePriority()"
+            />
+            <input
+              style="width: 110px; height: 25px; text-align: center; padding: 0"
+              name="removePriorityButton"
+              id="removePriorityButtonId"
+              type="button"
+              value="Remove Priority"
+              onclick="removePriority()"
+            />
+            <label id="priorityErrMsg" style="color: red"></label>
+          </form>
+        </td>
+      </tr>
+      <tr style="width: 100%; height: 400px">
+        <td
+          colspan="2"
+          style="vertical-align: top; width: 90%; border: solid 2px black"
+        >
+          <table>
+            <thead>
+              <tr>
+                <td></td>
+                <td>ID</td>
+                <td>Title</td>
+                <td>Assignee</td>
+                <td>Priority</td>
+              </tr>
+            </thead>
+            <tbody id="dataAreaId"></tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <div
+      id="assigneeStatus"
+      style="display: none; font-weight: bold; margin: 8px 0"
+    ></div>
+    <!-- Assignee Modal -->
+    <div
+      id="assigneeModal"
+      class="modal-overlay form-hidden"
+      aria-hidden="true"
+    >
+      <div class="modal-card">
+        <h3 class="modal-title">Add Assignee</h3>
+
+        <label for="assigneeNameInput" class="modal-label">Assignee name</label>
+        <input
+          id="assigneeNameInput"
+          class="modal-input"
+          type="text"
+          maxlength="60"
+        />
+
+        <div class="modal-actions">
+          <button
+            id="assignConfirmBtn"
+            class="modal-btn"
+            onclick="submitAssignAssigneeForSelected()"
+          >
+            Assign
+          </button>
+          <button class="modal-btn-secondary" onclick="closeAssigneeModal()">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Remove Assignee Confirm Modal -->
+    <div
+      id="assigneeRemoveModal"
+      class="modal-overlay form-hidden"
+      aria-hidden="true"
+    >
+      <div class="modal-card">
+        <h3 class="modal-title">Remove Assignee</h3>
+        <p class="modal-label" style="margin: 0 0 8px">
+          Are you sure you want to remove the assignee from this task?
+        </p>
+        <div class="modal-actions">
+          <button class="modal-btn" onclick="submitRemoveAssigneeConfirmed()">
+            Yes
+          </button>
+          <button
+            class="modal-btn-secondary"
+            onclick="closeRemoveAssigneeModal()"
+          >
+            No
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

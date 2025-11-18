@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\cone\\Second grade 1st semester\\SoftwareQuality2020\\A03_API_Test\\",
+  "WorkspaceRootPath": "D:\\cone\\Second grade 1st semester\\SoftwareQuality2020\\DevOpsPractice\\A03_API_Test\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C78E5E21-6109-4E35-96FB-A4FFE9E375A4}|A03_API_Test.csproj|d:\\cone\\second grade 1st semester\\softwarequality2020\\a03_api_test\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C78E5E21-6109-4E35-96FB-A4FFE9E375A4}|A03_API_Test.csproj|d:\\cone\\second grade 1st semester\\softwarequality2020\\devopspractice\\a03_api_test\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C78E5E21-6109-4E35-96FB-A4FFE9E375A4}|A03_API_Test.csproj|solutionrelative:unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -52,11 +52,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "UnitTest1.cs",
-              "DocumentMoniker": "D:\\cone\\Second grade 1st semester\\SoftwareQuality2020\\A03_API_Test\\UnitTest1.cs",
+              "DocumentMoniker": "D:\\cone\\Second grade 1st semester\\SoftwareQuality2020\\DevOpsPractice\\A03_API_Test\\UnitTest1.cs",
               "RelativeDocumentMoniker": "UnitTest1.cs",
-              "ToolTip": "D:\\cone\\Second grade 1st semester\\SoftwareQuality2020\\A03_API_Test\\UnitTest1.cs",
+              "ToolTip": "D:\\cone\\Second grade 1st semester\\SoftwareQuality2020\\DevOpsPractice\\A03_API_Test\\UnitTest1.cs",
               "RelativeToolTip": "UnitTest1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABgCAAAAAAAAAAAuwCoCAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-17T21:37:26.286Z",
               "EditorCaption": ""
