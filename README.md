@@ -58,11 +58,17 @@ This repository demonstrates three essential testing methodologies:
 
 ## Project Structure
 DevOpsPractice/
+
 ├── TaskTracker/              # Main application
+
 ├── TaskTracker.Tests/        # Unit tests (Assignment 2)
+
 ├── TaskTracker.API.Tests/    # API tests (Assignment 3)
+
 ├── TaskTracker.UI.Tests/     # UI automation (Assignment 4)
+
 └── README.md                 # Documentation
+
 
 ## Testing Best Practices
 -Arrange-Act-Assert pattern for test clarity
