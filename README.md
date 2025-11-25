@@ -11,7 +11,7 @@ API Testing - RESTful endpoint validation
 UI Test Automation - Automated browser testing with Selenium
 
 Projects
-###Assignment 2: Unit Testing
+##Assignment 2: Unit Testing
 9 unit tests covering 3 core functionalities
 
 Implements Arrange-Act-Assert (AAA) pattern
@@ -20,7 +20,7 @@ Boundary Value Analysis for edge cases
 
 Tests: Task CRUD operations, search, assignee/priority management
 
-###Assignment 3: API Testing
+##Assignment 3: API Testing
 18 comprehensive API tests
 
 Full CRUD operation coverage
@@ -29,7 +29,7 @@ HTTP status code validation (200, 201, 204, 400, 404)
 
 Tests all TaskTracker RESTful endpoints
 
-###Assignment 4: UI Test Automation
+##Assignment 4: UI Test Automation
 5+ user interaction test scenarios
 
 Selenium WebDriver with ChromeDriver
