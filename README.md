@@ -9,7 +9,7 @@ This repository demonstrates three essential testing methodologies:
 -UI Test Automation - Automated browser testing with Selenium
 
 ## Projects
-### Assignment 2: Unit Testing
+### Project 2: Unit Testing
 -9 unit tests covering 3 core functionalities
 
 -Implements Arrange-Act-Assert (AAA) pattern
@@ -18,7 +18,7 @@ This repository demonstrates three essential testing methodologies:
 
 -Tests: Task CRUD operations, search, assignee/priority management
 
-### Assignment 3: API Testing
+### Project 3: API Testing
 -18 comprehensive API tests
 
 -Full CRUD operation coverage
@@ -27,7 +27,7 @@ This repository demonstrates three essential testing methodologies:
 
 -Tests all TaskTracker RESTful endpoints
 
-### Assignment 4: UI Test Automation
+### Project 4: UI Test Automation
 -5+ user interaction test scenarios
 -Selenium WebDriver with ChromeDriver
 -Real-world workflow validation
